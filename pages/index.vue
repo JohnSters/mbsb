@@ -1,79 +1,61 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container>
+    <v-toolbar-title class="text-center">Morne Bothma Iodine/ Calcium Bird Blocks(Pty) LTD</v-toolbar-title>
+    <p class="text-center blue-grey--text mb-6 mt-3">Give your birds all the necessary Minerals/Vitamins they need all year.
+      Increase bone strength, less egg bound, increase egg strength, increase general health of your birds.</p>
+    <v-row>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3">
+          <v-img src="/products/cube.jpeg" contain></v-img>
+          <v-card-title>Product Title: Icecube</v-card-title>
+          <v-card-text>Iodine/ Calcium in Icecube shapes</v-card-text>
+          <p class="orange--text text-center">Price: R 4.20 each</p>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-package</v-icon>Order Now</v-btn>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-whatsapp</v-icon>Whatsapp Order</v-btn>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3">
+          <v-img src="/products/medium.jpeg"></v-img>
+          <v-card-title>Product Title: Medium blocks</v-card-title>
+          <v-card-text>Iodine/ Calcium in Ice cube shapes</v-card-text>
+          <p class="orange--text text-center">Price: R 13.00 each</p>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-package</v-icon>Order Now</v-btn>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-whatsapp</v-icon>Whatsapp Order</v-btn>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3">
+          <v-img src="/products/flight.jpeg"></v-img>
+          <v-card-title>Product Title: Flight blocks </v-card-title>
+          <v-card-text>Iodine/ Calcium in Icecube shapes</v-card-text>
+          <p class="orange--text text-center">Price: R 36.00 each</p>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-package</v-icon>Order Now</v-btn>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-whatsapp</v-icon>Whatsapp Order</v-btn>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3">
+          <v-img src="/products/powder.jpeg"></v-img>
+          <v-card-title>Product Title: Powder </v-card-title>
+          <v-card-text>Iodine/ Calcium 250g Powder</v-card-text>
+          <p class="orange--text text-center">Price: R 60.00 each</p>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-package</v-icon>Order Now</v-btn>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-whatsapp</v-icon>Whatsapp Order</v-btn>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3">
+          <v-img src="/products/heart.jpeg"></v-img>
+          <v-card-title>Product Title: Heart Shape</v-card-title>
+          <v-card-text>Iodine/ Calcium in Heart Shaped Blocks</v-card-text>
+          <p class="orange--text text-center">Price: R 10.00 each</p>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-package</v-icon>Order Now</v-btn>
+          <v-btn class="blue darken-3 rounded-0 mt-1" depressed dark block><v-icon class="mr-1">mdi-whatsapp</v-icon>Whatsapp Order</v-btn>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

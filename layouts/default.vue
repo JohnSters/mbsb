@@ -1,86 +1,66 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+  <v-app>
+    <v-system-bar app color="white">
+      <v-spacer></v-spacer>
+      <p class="mt-4 hidden-sm-and-down">Please contact Morne Bothma @ <b class="red--text">082-867-4352 </b>for any
+        inquiries.</p>
+    </v-system-bar>
+
+    <v-app-bar app color="blue darken-4" flat>
+      <v-spacer></v-spacer>
+      <v-btn to="/" class="hidden-md-and-up" x-small text dark>Home</v-btn>
+      <v-btn to="/about" class="hidden-md-and-up" x-small text dark>About</v-btn>
+      <v-btn to="/ingredients" class="hidden-md-and-up" x-small text dark>Ingredients</v-btn>
       <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
+        class="hidden-md-and-up"
+        href="https://www.facebook.com/groups/1209494736252117/?mibextid=6NoCDW"
+        target="_blank"
+        x-small
+        text
+        dark>
+        <v-icon>mdi-facebook</v-icon>
+      </v-btn>
+
+      <v-btn
+        class="hidden-sm-and-down"
+        dark
+        outlined
+        rounded
+        text
+        to="/"
       >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+        Home
       </v-btn>
       <v-btn
-        icon
-        @click.stop="clipped = !clipped"
+        class="ml-2 hidden-sm-and-down"
+        dark
+        outlined
+        rounded
+        text
+        to="/about"
       >
-        <v-icon>mdi-application</v-icon>
+        About
       </v-btn>
+      <ProductIngredients />
       <v-btn
-        icon
-        @click.stop="fixed = !fixed"
+        class="ml-2 hidden-sm-and-down"
+        dark
+        href="https://www.facebook.com/groups/1209494736252117/?mibextid=6NoCDW"
+        outlined
+        rounded
+        target="_blank"
+        text
       >
-        <v-icon>mdi-minus</v-icon>
+        Facebook Page
       </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
       <v-container>
-        <Nuxt />
+        <Nuxt/>
       </v-container>
     </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer
-      :absolute="!fixed"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -93,25 +73,12 @@ export default {
   name: 'DefaultLayout',
   data () {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      links: [
+        'Dashboard',
+        'Messages',
+        'Profile',
+        'Updates'
+      ]
     }
   }
 }
