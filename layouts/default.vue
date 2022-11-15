@@ -117,7 +117,7 @@ export default {
           text: 'Can you help me?',
           label: 'Marketing Manager',
           name: 'Morne Bothma',
-          number: '0828674352',
+          number: '27828674352',
           avatar: {
             src: '/products/logo-round.png',
             alt: 'Sales'
