@@ -3,7 +3,18 @@
     <v-system-bar app color="white">
       <v-spacer></v-spacer>
       <p class="mt-4 hidden-sm-and-down">Please contact Morne Bothma @ <b class="red--text">082-867-4352 </b>for any
-        inquiries.</p>
+        inquiries -</p>
+      <p class="mt-4 hidden-md-and-up"><v-icon class="mb-1">mdi-phone</v-icon><b class="red--text">082-867-4352 </b>for any
+        inquiries -</p>
+      <v-btn
+        href="https://form.jotform.com/223181496468566"
+        target="_blank"
+        class="ml-3 hidden-sm-and-down rounded-0 red"
+        text
+        dark
+        x-small
+      >Customer Feedback
+      </v-btn>
     </v-system-bar>
 
     <v-app-bar app color="blue darken-4" flat>
@@ -115,7 +126,7 @@ export default {
         {
           app: 'whatsapp',
           text: 'Can you help me?',
-          label: 'Marketing Manager',
+          label: 'Owner',
           name: 'Morne Bothma',
           number: '27828674352',
           avatar: {
